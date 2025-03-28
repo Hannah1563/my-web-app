@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobSphere - Find Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JobSphere</h1>
+            <p>Discover Your Perfect Career Opportunity</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="jobTitleInput" placeholder="Enter Job Title (e.g., Node.js Developer)">
+            <input type="text" id="locationInput" placeholder="Enter Location (e.g., New York)">
+            <select id="experienceSelect">
+                <option value="ALL">All Experience Levels</option>
+                <option value="ENTRY">Entry Level</option>
+                <option value="MID">Mid Level</option>
+                <option value="SENIOR">Senior Level</option>
+            </select>
+            <button id="searchButton">Search Jobs</button>
+        </div>
+
+        <div id="loadingSpinner" class="spinner hidden">
+            <div class="spinner-inner"></div>
+        </div>
+
+        <div id="resultsContainer" class="results-grid">
+            <!-- Job results will be dynamically inserted here -->
+        </div>
+
+        <div id="paginationContainer" class="pagination hidden">
+            <button id="prevButton">Previous</button>
+            <span id="pageInfo">Page 1 of 1</span>
+            <button id="nextButton">Next</button>
+        </div>
+    </div>
+
+    <div id="jobDetailModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="jobDetailContent"></div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
